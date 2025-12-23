@@ -6,13 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&family=Homemade+Apple&display=swap" rel="stylesheet">
 
   <style>
-    /* RESET */
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -23,12 +20,11 @@
       overflow-x: hidden;
     }
 
-    /* HEART BACKGROUND */
+    /* BACKGROUNDS */
     .heart-bg {
       position: fixed;
       inset: 0;
-      background-image: url("redheartspixel.jpeg");
-      background-repeat: repeat;
+      background: url("redheartspixel.jpeg") repeat;
       background-size: 120px 120px;
       opacity: 0.25;
       pointer-events: none;
@@ -36,13 +32,11 @@
       z-index: -3;
     }
 
-    /* STARS */
     .stars {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: -2;
-      overflow: hidden;
     }
 
     .star {
@@ -56,12 +50,8 @@
     }
 
     @keyframes floatUp {
-      from {
-        transform: translateY(100vh);
-      }
-      to {
-        transform: translateY(-10vh);
-      }
+      from { transform: translateY(100vh); }
+      to { transform: translateY(-10vh); }
     }
 
     /* HEADER */
@@ -81,33 +71,37 @@
 
     header p {
       opacity: 0.7;
-      font-size: 1rem;
     }
 
-    /* CONTENT CONTAINER */
+    /* CONTENT */
     .container {
       max-width: 800px;
       margin: auto;
       padding: 20px;
     }
 
-    /* LETTER CARDS */
+    /* LETTERS */
     .letter {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255,255,255,0.04);
       border-radius: 16px;
       padding: 30px;
       margin-bottom: 40px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+
+      font-family: 'Homemade Apple', cursive;
+
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .letter.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .letter h2 {
-      .letter {
-  font-family: 'Homemade Apple', cursive;
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
-
-    .letter p {
+      font-family: 'Playfair Display', serif;
       margin-bottom: 15px;
     }
 
@@ -118,236 +112,198 @@
       display: block;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 60px 20px;
       opacity: 0.6;
-      font-size: 0.9rem;
       max-width: 800px;
       margin: auto;
     }
   </style>
 </head>
 
-<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
-
-  
 <body>
 
-  <!-- BACKGROUND LAYERS -->
-  <div class="heart-bg"></div>
-  <div class="stars"></div>
+<div class="heart-bg"></div>
+<div class="stars"></div>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Letters Written in Winter</h1>
-    <p>something warm, just for you</p>
-  </header>
+<header>
+  <h1>Letters Written in Winter</h1>
+  <p>something warm, just for you</p>
+</header>
 
-  <!-- LETTERS -->
-  <main class="container">
+<main class="container">
 
-    <div class="letter">
-      <h2>December 01</h2>
-      <p>
-     My dearest April,
-I didn’t know how to say this out loud,
- so I decided to leave it here instead.
-From the moment you reached out to me again, I felt something settle into place.
- Like I was being gently pulled back to where I was always meant to be.
- There’s something about you that feels impossible to resist.
-      </p>
+  <!-- DECEMBER 01 -->
+  <div class="letter">
+    <h2>December 01</h2>
+    <p>
+      My dearest April,<br><br>
+      I didn’t know how to say this out loud, so I decided to leave it here instead.
+      From the moment you reached out to me again, I felt something settle into place.
+      Like I was being gently pulled back to where I was always meant to be.
+      There’s something about you that feels impossible to resist.
+    </p>
 
-      <img src="april1.jpeg" alt="Portrait">
+    <img src="april1.jpeg">
 
-      <p>
-        You find your way into my dreams more often than I expect.
- You make my worries feel smaller, softer, easier to carry.
- When I think about you, the noise in my head goes quiet,
- and for a moment, everything feels simple.
-If I’m lucky enough to feel this closeness until my last breath, I know I’ll be grateful for it.
- Being with you already feels like a gift I didn’t know I was allowed to have.
+    <p>
+      You find your way into my dreams more often than I expect.
+      You make my worries feel smaller, softer, easier to carry.
+      When I think about you, the noise in my head goes quiet,
+      and for a moment, everything feels simple.
+      If I’m lucky enough to feel this closeness until my last breath,
+      I know I’ll be grateful for it.
+      Being with you already feels like a gift I didn’t know I was allowed to have.<br><br>
+      With love, Michalis
+    </p>
+  </div>
 
-        With love, Michalis
-      </p>
-    </div>
+  <!-- DECEMBER 02 -->
+  <div class="letter">
+    <h2>December 02</h2>
+    <p>
+      My April,<br><br>
+      I know your days are long and tiring.
+      I know how much of yourself you give away to help others before the day is even over.
+      And yet, somehow, you still find space for me in your busy schedule.
+      Even in the quiet in-between moments, you choose to reach out to spam me with TikToks
+      or send me cute angry cat pics.
+    </p>
 
-    <div class="letter">
-      <h2>December 02</h2>
+    <img src="april2.jpeg">
 
-      <p>
-       My April,
-        
-I know your days are long and tiring.
- I know how much of yourself you give away to help others before the day is even over.
- And yet, somehow, you still find space for me in your busy schedule.
-Even in the quiet in-between moments, you choose to reach out to spam me with TikToks or send me cute angy cat pics.
-      </p>
+    <p>
+      Thank you for making room for me in a life that already asks so much of you.
+      I see your effort and I feel your love.
+      And I’m grateful for you, always.<br><br>
+      With love, Michalis
+    </p>
+  </div>
 
-      <img src="april2.jpeg" alt="Drawing">
+  <!-- DECEMBER 03 -->
+  <div class="letter">
+    <h2>December 03</h2>
+    <p>
+      My love, April,<br><br>
+      You have no idea how special you are to me.
+      You’re the only one I don’t mind losing sleep for,
+      the only one I can never get tired of talking to,
+      and the only one who crosses my mind constantly throughout the day.
+    </p>
 
-      <p>
-        Thank you for making room for me in a life that already asks so much of you.
- I see it your effort and I feel your love.
- And I’m grateful for you, always.
-With love,
- Michalis
-      </p>
-    </div>
+    <img src="april3.jpeg">
 
- <div class="letter">
-      <h2>December 03</h2>
+    <p>
+      You’re the only one who can make me smile without trying,
+      bring my mood up without intending to,
+      and affect my emotions with every action of yours.
+      I can’t explain it with just words how much you mean to me,
+      but you’re the only one I’m afraid of losing
+      and the only one I want to keep forever.<br><br>
+      With all my heart, Michalis
+    </p>
+  </div>
 
-      <p>
-       My love, April,
-        
-You have no idea how special you are to me.
-        Your’re the only one I don’t mind losing sleep for,
-        the only one who I can never get tired of talking to,
-         and the only one who crosses my mind constantly throughout the day.
-        
-      </p>
+  <!-- DECEMBER 04 -->
+  <div class="letter">
+    <h2>December 04</h2>
+    <p>
+      To my beautiful girl, April,<br><br>
+      Your presence wraps around my soul like the softest blanket on the coldest stormy night.
+      When the world feels harsh and unforgiving, you become my second home —
+      warm, gentle, and endlessly comforting.
+    </p>
 
-      <img src="april3.jpeg" alt="Drawing">
+    <img src="april4.jpeg">
 
-      <p>
-        You’re the only one who can make me smile without trying, 
-        bring my mood up without the intention 
-    to and affect my emotions with every action of yours. 
-        
-        I can’t explain it with just words how much you mean to me, but you’re the only one I’m afraid of losing and the only one I want to keep in my life forever.
+    <p>
+      I treasure the quiet moments we share on call,
+      the way my face hurts from smiling,
+      and how everything you say feels amplified when I can see you.
+      You are my cozy corner in this world,
+      my safe space when life’s storms rage.<br><br>
+      Forever yours, Michalis
+    </p>
+  </div>
 
-        With all my heart, Michalis.
+  <!-- DECEMBER 05 -->
+  <div class="letter">
+    <h2>December 05</h2>
+    <p>
+      To my most patient girl, April,<br><br>
+      I am endlessly grateful for the way you stay,
+      especially when I’m stubborn and try to push you away.
+      You see past my rough edges and hold me close without making me feel like too much.
+    </p>
 
-      </p>
-    </div>
+    <img src="april5.jpeg">
 
-     <div class="letter">
-      <h2>December 04</h2>
+    <p>
+      You walk beside me even when I’m unsteady.
+      Sometimes I still can’t believe how lucky I am that you chose me —
+      and that you keep choosing me.
+      I promise to spend every day trying to be the partner you deserve.<br><br>
+      Yours truly, Michalis
+    </p>
+  </div>
 
-      <p>
-      To my beautiful girl, April
-         
-        your presence wraps around my soul like the softest blanket on the coldest stormy night. 
-        When the world feels harsh and unforgiving, you become my second home, so warm and gentle, and your presence so comforting.
-I find myself treasuring those quiet moments we share when we’re on call together,
-        how my face hurts from smiling, and how everything else you say to me
-          feels so amplified by being able to see your beautiful face with every word.
-        
-        
-      </p>
+  <!-- DECEMBER 06 -->
+  <div class="letter">
+    <h2>December 06</h2>
+    <p>
+      To my gorgeous April,<br><br>
+      I’m constantly in awe of your beauty,
+      but it’s so much more than what meets the eye.
+      It’s in your laugh, your grace, and the way you speak with such kindness.
+    </p>
 
-      <img src="april4.jpeg" alt="Drawing">
+    <img src="april6.jpeg">
 
-      <p>
-        The memory of us simply being together fills my heart with a warmth that no fire could ever match.
-You are my cozy corner in this world, my safe space when life's storms rage. 
-        Your giggles are the melody that turns my house into a home,
-          and your love is the light that guides me through even the darkest nights.
+    <p>
+      I love your mind, the way you think and teach me without judgment.
+      You are the perfect harmony of a gentle soul and stunning intellect.
+      In Greek, we say people like you are love letters —
+      because their very existence is a message of beauty and grace.<br><br>
+      With all my love, Michalis
+    </p>
+  </div>
 
-        Forever yours, Michalis.
+</main>
 
+<footer>
+  Yours truly, with love.
+</footer>
 
-      </p>
-    </div>
+<script>
+  const heartBg = document.querySelector('.heart-bg');
+  window.addEventListener('scroll', () => {
+    heartBg.style.opacity = Math.max(0, 0.25 - window.scrollY / 1000);
+  });
+</script>
 
-   </p>
-    </div>
+<script>
+  const starsContainer = document.querySelector('.stars');
+  for (let i = 0; i < 40; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = 10 + Math.random() * 20 + 's';
+    star.style.animationDelay = Math.random() * 20 + 's';
+    starsContainer.appendChild(star);
+  }
+</script>
 
-     <div class="letter">
-      <h2>December 05</h2>
-
-      <p>
-     To my most patient girl, April
-        
-I am endlessly grateful for the way you stay, especially when I'm impossibly stubborn and try to push you away.
-        I know getting through to me feels like an uphill battle, so I'm forever thankful that you keep choosing me even when I'm unsteady.
-You have this remarkable gift of seeing past my rough edges and holding me close without ever making me feel like too much to handle.
-        Even when I hurt you, you remain so steady.
-        
-        
-      </p>
-
-      <img src="april5.jpeg" alt="Drawing">
-
-      <p>
-        How do you love me through my most impossible moments with such grace? 
-   You see the person I'm becoming even when I can't see it myself,
-        and you choose to walk beside me through every stubborn step.
-
-          Sometimes I still can't believe how lucky I am that you chose me, and that you continue to choose me.
-        I promise I will spend every day trying to be the partner you deserve.
-
-        Thank you for never giving up on me.
-            Yours truly, Michalis 
-      </p>
-    </div>
-
-
-   </p>
-    </div>
-
-     <div class="letter">
-      <h2>December 06</h2>
-
-      <p>
-     To my gorgeous April
-I was sitting here thinking about you and had to put these thoughts into words.
-I am constantly in awe of your beauty, but it’s so much more than what meets the eye.
-        It’s in the spark in your eyes when you laugh and the grace you carry every time we call.
-    And yet, it’s your brilliant mind that truly captivates me.
-        
-    I love the way you think, the way you challenge me, and the depth of your knowledge.
-        I love the way you explain things to me so sweetly, without judging me for never knowing enough.
-        You are the perfect harmony of a gentle soul and stunning intellect.
-      </p>
-
-      <img src="april6.jpeg" alt="Drawing">
-
-      <p>
-        In Greek, there is a beautiful way to describe someone who doesn't realize how flawless they are.
-      We call them 'love letters,' because their very existence is a message of beauty and grace.
-        To me, you are exactly that. You are rare, beautiful, and a gift to everyone who knows you. 
-    I’m the luckiest person in the world to have you by my side."
-           With all my love,
-                 Michalis.
-
-      </p>
-    </div>
-      
-    
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    Yours truly, with love.
-  </footer>
-
-  <!-- HEART FADE ON SCROLL -->
-  <script>
-    const heartBg = document.querySelector('.heart-bg');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const fade = Math.max(0, 0.25 - scrollY / 1000);
-      heartBg.style.opacity = fade;
+<script>
+  const letters = document.querySelectorAll('.letter');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  </script>
+  }, { threshold: 0.2 });
 
-  <!-- STAR GENERATOR -->
-  <script>
-    const starsContainer = document.querySelector('.stars');
-
-    for (let i = 0; i < 40; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.left = Math.random() * 100 + 'vw';
-      star.style.animationDuration = 10 + Math.random() * 20 + 's';
-      star.style.animationDelay = Math.random() * 20 + 's';
-      starsContainer.appendChild(star);
-    }
-  </script>
+  letters.forEach(letter => observer.observe(letter));
+</script>
 
 </body>
 </html>
